@@ -1,24 +1,103 @@
+<script>
+  import Scroller from "@sveltejs/svelte-scroller";
+  import { onMount } from "svelte";
+  import * as d3 from "d3";
+
+  import DebugScroller from "../components/DebugScroller.svelte";
+
+  /* Variables para el scroller1 */
+  let count;
+  let index;
+  let offset;
+  let progress;
+  let top = 0.1;
+  let threshold = 0.5;
+  let bottom = 0.9;
+
+  $: svgScale = offset > 0.2 && offset < 0.8 ? 1 : 1.5;
+  $: svgTransform = offset > 0.2 && offset < 0.8 ? "translate(0, 0)" : "translate(35%, 20%)";
+  $: svgPosition = offset > 0.2 && offset < 0.8 ? "left" : "center";
+  $: svgXaxis = offset > 0.2 && offset < 0.8 ? "start" : "center";
+</script>
 
 <head>
-    <link rel="stylesheet" href="./src/style/styles.css">
+  <link rel="stylesheet" href="./src/style/styles.css" />
 </head>
 
-<div style="height: 150px;"></div>
-<h1 class ='title'>La historia a 300km/h</h1>
-<p class = 'subtitle'>La evolución de la Formula 1 contada a través de los datos</p>
-<div class = "separator"></div>
-<div class = "history-container">
-    <div class = "intro-div">
-        <p class = 'body'>La Fórmula 1, comúnmente conocida como F1, es la categoría reina del automovilismo, donde los mejores pilotos y las más avanzadas tecnologías de vehículos se enfrentan en circuitos de todo el mundo. Este deporte de alta velocidad y precisión es un espectáculo de ingeniería y habilidad humana, que atrae a millones de aficionados cada temporada.</p>
-        <p class = 'body'>La Fórmula 1 es una competición de monoplazas, vehículos diseñados específicamente para este tipo de carreras, que se destacan por su aerodinámica sofisticada y motores potentes. Los coches de F1 pueden alcanzar velocidades superiores a los 350 km/h, con aceleraciones que desafían los límites físicos tanto de la máquina como del piloto.</p>
-        <p class = 'body'>La historia de la Fórmula 1 comenzó en 1950, cuando se celebró el primer Campeonato Mundial de Pilotos. La carrera inaugural tuvo lugar en el circuito de Silverstone, en el Reino Unido. Desde entonces, la F1 ha evolucionado significativamente, pasando de ser una serie de carreras entre amigos y entusiastas a una competición global con equipos multimillonarios, tecnología punta y una enorme audiencia internacional. Grandes nombres como Juan Manuel Fangio, Ayrton Senna, Michael Schumacher y Lewis Hamilton han dejado su huella en este deporte, cada uno marcando épocas de dominio y redefiniendo lo que significa ser el mejor en la pista.</p>
+<main>
+  <div class="header padding-50">
+    <img
+      class="center f1-logo"
+      src="../src/assets/images/f1_logo.png"
+      alt="f1 logo"
+    />
+    <h3 class="title padding-50">
+      <b>La historia a 300km/h</b>
+    </h3>
+    <p class="subtitle padding-50">Formula 1 contada a través de los datos</p>
+  </div>
+
+  {#if progress < 1}
+    <DebugScroller {index} {count} {offset} {progress} />
+  {/if}
+  <Scroller
+    {top}
+    {threshold}
+    {bottom}
+    bind:count
+    bind:index
+    bind:offset
+    bind:progress
+  >
+    <div
+      slot="background"
+      class="timeline-svg"
+      style="
+      
+      transform: {svgTransform};"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="524"
+        height="272"
+        viewBox="0 0 524 272"
+        fill="none"
+        style="transform: scale({svgScale});"
+      >
+        <path
+          d="M8.02276 33.2146C8.33805 40.2705 12.5257 50.2597 19.0738 65.2558C24.6402 78.0039 30.3009 92.176 31.6549 96.75L34.1166 105.066L39.0279 106.912C42.7013 108.293 43.9903 109.317 44.1447 110.979C45.6154 126.803 58.7517 201.586 61.4108 209.271C74.5848 247.342 99.35 263.15 144.816 262.514C153.364 262.394 160.593 262.413 160.882 262.556C161.78 262.998 177.686 258.865 186.828 255.814C197.091 252.389 198.146 252.516 198.56 257.218C199.046 262.737 187.708 262.197 305.92 262.328C324.142 262.349 359.178 262.648 383.779 262.993L428.506 263.618L455.319 260.307C496.876 255.175 509.807 248.129 515.189 227.693C517.724 218.068 516.711 213.984 510.009 206.831C505.216 201.715 502.085 201.071 480.4 200.723C469.778 200.553 424.075 199.847 378.839 199.155C274.749 197.561 279.532 197.893 274.719 191.931C269.34 185.275 259.783 182.5 248.773 184.399C240.136 185.889 243.702 188.395 213.383 159.55C125.193 75.6758 133.643 85.1788 94.3826 25.7495C80.7066 5.06538 83.6226 6.32439 59.0824 10.4994C20.9292 16.9894 7.41715 19.7665 8.01916 33.2365L8.02276 33.2146Z"
+          stroke="#F3F3F3"
+          stroke-width="15"
+          stroke-linejoin="round"
+        />
+      </svg>
     </div>
-    <div class = "image-container">
-        <img class = "image" src="../src/assets/images/first_GP.jpg" alt="First GP">    
-        <img class = "image" src="../src/assets/images/first_GP2.jpg" alt="First GP2">
+
+    <div slot="foreground" class="foreground_container">
+      <section class="step_foreground">
+        <div class="epi_foreground">
+          <h3>Seccion {index + 1}</h3>
+          <p>Todos los deportistas</p>
+        </div>
+      </section>
+      <section class="step_foreground">
+        <div class="epi_foreground">
+          <h3>Seccion {index + 1}</h3>
+          <p>Deportistas femeninas</p>
+        </div>
+      </section>
+      <section class="step_foreground">
+        <div class="epi_foreground">
+          <h3>Seccion {index + 1}</h3>
+          <p>Deportistas masculinos</p>
+        </div>
+      </section>
+      <section class="step_foreground">
+        <div class="epi_foreground">
+          <h3>Seccion {index + 1}</h3>
+          <p>Deportistas americanos</p>
+        </div>
+      </section>
     </div>
-</div>
-<div class = "separator"></div>
-<div>
-    <img class = "timeline" src="../src/assets/images/timeline.jpg" alt="F1 Timeline">
-</div> 
+  </Scroller>
+</main>
