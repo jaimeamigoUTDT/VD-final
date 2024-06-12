@@ -15,7 +15,7 @@ body {
 .title {
     font-family: 'Formula 1';
     font-style: bold;
-    font-size: 5em;
+    font-size: 10em;
     color: #F3F3F3;
     text-align: center;
     margin: 0px;
@@ -82,9 +82,12 @@ body {
 }
 
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    
 }
 
 .f1-logo {
@@ -112,13 +115,40 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-svg {
-    transition: transform 0.5s ease;
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: grid;
+    position: relative;
 }
 
-.timeline-svg {
-    display: flex;
-    height: 100vh; /* Adjust as needed to fill the viewport height */
-    width: 100%;
-    transition: transform 1s ease, justify-content 1s ease, align-items 1s ease;
-  }
+.section {
+    scroll-snap-align: start;
+    height: 100vh;
+}
+
+.sector {
+    transition: all .2s ease;
+}
+
+.sector:hover {
+    stroke-width: 25px; /* Adjust the scale factor as needed */
+    opacity: 1;
+}
+
+.bring-to-front {
+    transition: all .2s ease;
+}
+
+.bring-to-front:hover {
+    z-index: 100;
+}
+#orange-label {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#orange-sector:hover ~ #orange-label {
+    opacity: 1;
+}
