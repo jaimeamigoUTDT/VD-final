@@ -1,9 +1,8 @@
 <script>
 
-  import DebugScroller from "../components/DebugScroller.svelte";
   import TitleComponent from "../components/TitleComponent.svelte";
   import TimelineScroller from "../components/TimelineScroller.svelte";
-
+  
   let count = 6;
   let index = 0;
   let offset = 0;

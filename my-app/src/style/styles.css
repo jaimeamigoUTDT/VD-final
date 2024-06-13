@@ -115,34 +115,14 @@ body {
     height: 100vh;
 }
 
-
-.sector {
-    transition: all .2s ease;
-}
-
-.sector:hover {
-    stroke-width: 24px; /* Adjust the scale factor as needed */
-    opacity: 1;
-    stroke: #FA0000;
-}
-
-.bring-to-front {
-    transition: all .2s ease;
-}
-
-.bring-to-front:hover {
-    z-index: 100;
-}
-#orange-label {
-    opacity: 0;
-    transition: opacity 0.2s ease;
-}
-
-#orange-sector:hover ~ #orange-label {
-    opacity: 1;
-}
-
 .f1-logo-svg {
     opacity: 0.3;
     scale: 2;
+}
+
+.timeline-svg {
+    width: 40vw;
+    height: auto;
+    scale: 1.5;
+    position: fixed;
 }

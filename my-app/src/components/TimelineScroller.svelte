@@ -3,14 +3,15 @@
 </head>
 
 <script>
+	  import LabelsManager from './LabelsManager.svelte';
     import Scroller from "@sveltejs/svelte-scroller";
     import BaseTimeline from "./BaseTimeline.svelte";
     import MaskTimeline from "./MaskTimeline.svelte";
     import DebugScroller from "./DebugScroller.svelte";
-
-    export let top = 0.1;
+    
+    export let top = 0;
     export let threshold = 0.5;
-    export let bottom = 0.9;
+    export let bottom = 1;
     export let count;
     export let index;
     export let offset;
@@ -32,6 +33,7 @@
     <div slot="background" class="section timeline-wrapper">
       <BaseTimeline />
       <MaskTimeline dashOffset={svgDashOffset} />
+      <LabelsManager {index}/>
     </div>
     <div slot="foreground">
       <section class="section"></section>
