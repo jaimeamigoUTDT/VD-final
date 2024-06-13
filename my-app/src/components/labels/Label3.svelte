@@ -27,6 +27,7 @@
         scale: 1;
         position: fixed;
         top: 10vh;
-        left: 30.3vw;
+        left: 30vw;
+        z-index: 1;
     }
 </style>

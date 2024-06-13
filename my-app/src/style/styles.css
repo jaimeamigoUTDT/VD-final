@@ -125,4 +125,5 @@ body {
     height: auto;
     scale: 1.5;
     position: fixed;
+    z-index: 10;
 }
