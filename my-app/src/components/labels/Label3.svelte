@@ -4,8 +4,6 @@
 
 <div class="label3">
     <svg
-        width="801"
-        height="132"
         viewBox="0 0 801 132"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -24,6 +22,9 @@
 
 <style>
     .label3 {
+        width: 40vw;
+        height: auto;
+        scale: 1;
         position: fixed;
         top: 10vh;
         left: 30.3vw;
