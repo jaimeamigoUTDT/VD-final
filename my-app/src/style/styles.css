@@ -1,34 +1,15 @@
 @import url("fonts.css");
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
-
+  
 body {
     background-color: #15151E;
-}
+  }
 
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.title {
-    font-family: 'Formula 1';
-    font-style: bold;
-    font-size: 10em;
-    color: #F3F3F3;
-    text-align: center;
-    margin: 0px;
-}
-
-.subtitle {
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 3.125em;
-    color: #F3F3F3;
-    text-align: center;
-    margin: 0px;
 }
 
 .body {
@@ -78,6 +59,10 @@ body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
 }
 
@@ -86,16 +71,18 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100vh;
+  }
+
+.logo-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: relative;
-    
-}
-
-.f1-logo {
-    width: 20%;
-}
-
-.padding-50 {
-    padding-top: 50px;
+    top: 250px;
+    scale: 2;
+    opacity: 0.3;
 }
 
 .step_foreground {
@@ -128,13 +115,15 @@ body {
     height: 100vh;
 }
 
+
 .sector {
     transition: all .2s ease;
 }
 
 .sector:hover {
-    stroke-width: 25px; /* Adjust the scale factor as needed */
+    stroke-width: 24px; /* Adjust the scale factor as needed */
     opacity: 1;
+    stroke: #FA0000;
 }
 
 .bring-to-front {
@@ -151,4 +140,9 @@ body {
 
 #orange-sector:hover ~ #orange-label {
     opacity: 1;
+}
+
+.f1-logo-svg {
+    opacity: 0.3;
+    scale: 2;
 }
