@@ -1,5 +1,6 @@
 <script>
     export let dashOffset;
+    export let dashArray;
 </script>
 
 <svg
@@ -15,7 +16,7 @@
         stroke-width="17"
         stroke-linejoin="round"
         stroke-linecap="round"
-        stroke-dasharray="250 1060"
+        stroke-dasharray="{dashArray} {1310-dashArray}"
         stroke-dashoffset="{dashOffset}"
     />
 </svg>

@@ -23,7 +23,7 @@
   .title {
     font-family: "Formula 1";
     font-style: bold;
-    font-size: 5em;
+    font-size: 6.25vw;
     color: #f3f3f3;
     text-align: center;
     margin: 0px;
@@ -33,7 +33,7 @@
     font-family: "Titillium Web", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 3.125em;
+    font-size: 3.125vw;
     color: #f3f3f3;
     text-align: center;
     margin: 0px;

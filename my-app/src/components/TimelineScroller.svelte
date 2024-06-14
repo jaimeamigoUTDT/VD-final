@@ -7,7 +7,6 @@
     import Scroller from "@sveltejs/svelte-scroller";
     import BaseTimeline from "./BaseTimeline.svelte";
     import MaskTimeline from "./MaskTimeline.svelte";
-    import DebugScroller from "./DebugScroller.svelte";
     
     export let top = 0;
     export let threshold = 0.5;
@@ -17,7 +16,8 @@
     export let offset;
     export let progress;
 
-    $: svgDashOffset = progress > 0 && progress < 1? -1310 * (1 - progress): 0;
+    $: svgDashOffset = progress > 0 && progress < 1? -1310 * (1 - progress) + 262: 262;
+    $: svgDashArray = index === 5? 1310: 262;
   
 </script>
 <main>
@@ -32,7 +32,7 @@
   >
     <div slot="background" class="section timeline-wrapper">
       <BaseTimeline />
-      <MaskTimeline dashOffset={svgDashOffset} />
+      <MaskTimeline dashOffset={svgDashOffset} dashArray = {svgDashArray} />
       <LabelsManager {index}/>
     </div>
     <div slot="foreground">
