@@ -1,7 +1,7 @@
 <script>
-	import Scroller from "@sveltejs/svelte-scroller";
+    import Scroller from "@sveltejs/svelte-scroller";
 
-    import Texto1 from "./textos/Texto1.svelte";
+    import TextScroller from "./TextScroller.svelte";
 
     export let top = 0;
     export let threshold = 0.5;
@@ -10,7 +10,6 @@
     export let index;
     export let offset;
     export let progress;
-
 </script>
 
 <head>
@@ -27,17 +26,16 @@
         bind:offset
         bind:progress
     >
-        <div slot="background" class="section">
-            <Texto1 actual_index = {index}/>
-        </div>
+        <div slot="background" class="section"></div>
         <div slot="foreground">
-            <section class="section">
-            </section>
+            <section class="section"><TextScroller textName="Texto1" /></section>
             <section class="section"></section>
+            <section class="section"><TextScroller textName="Texto2" /></section>
             <section class="section"></section>
-            <section class="section"></section>
-            <section class="section"></section>
-            <section class="section"></section>
+            <!-- <section class="section"><TextScroller textName="Texto3" /></section> -->
         </div>
     </Scroller>
 </main>
+
+<style>
+</style>

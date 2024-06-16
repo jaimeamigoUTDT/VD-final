@@ -108,6 +108,7 @@ body {
 .section {
     scroll-snap-align: start;
     height: 100vh;
+    
 }
 
 .f1-logo-svg {

@@ -20,3 +20,4 @@
         stroke-dashoffset="{dashOffset}"
     />
 </svg>
+
