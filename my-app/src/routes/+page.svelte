@@ -3,6 +3,8 @@
   import TitleComponent from "../components/TitleComponent.svelte";
   import TimelineScroller from "../components/TimelineScroller.svelte";
   import ContextScroller from "../components/ContextScroller.svelte";
+  import GlobeScroller from "../components/GlobeScroller.svelte";
+  import SpeedScroller from "../components/SpeedScroller.svelte";
   
   let count = 0;
   let index = 0;
@@ -23,4 +25,6 @@
   <TitleComponent />
   <TimelineScroller {index} {count} {offset} {progress} />
   <ContextScroller {index} {count} {offset} {progress}/>
+  <SpeedScroller {index} {count} {offset} {progress}/>
+
 </main>
