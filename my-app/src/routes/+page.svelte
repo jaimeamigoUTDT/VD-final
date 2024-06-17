@@ -25,6 +25,7 @@
   <TitleComponent />
   <TimelineScroller {index} {count} {offset} {progress} />
   <ContextScroller {index} {count} {offset} {progress}/>
+  <div class="section"></div>
   <SpeedScroller {index} {count} {offset} {progress}/>
 
 </main>
