@@ -1,5 +1,6 @@
 <script>
     import Scroller from "@sveltejs/svelte-scroller";
+    
     export let textName;
     
     let TextComponent;
@@ -31,7 +32,6 @@
         bind:progress
     >
         <div slot="background" class="section">
-            <svelte:component this={TextComponent} actual_index={index} />
         </div>
         <div slot="foreground">
             <section class="section"></section>
