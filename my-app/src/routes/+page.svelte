@@ -3,7 +3,8 @@
   import TitleComponent from "../components/TitleComponent.svelte";
   import ContextScroller from "../components/Context/ContextScroller.svelte";
   import SpeedScroller from "../components/Speed/SpeedScroller.svelte";
-  
+  import BudgetScroller from "../components/Budget/BudgetScroller.svelte";
+
   let count = 0;
   let index = 0;
   let offset = 0;
@@ -19,4 +20,7 @@
   <TitleComponent />
   <ContextScroller {index} {count} {offset} {progress}/>
   <SpeedScroller {index} {count} {offset} {progress}/>
+  <BudgetScroller {index} {count} {offset} {progress}/>
 </main>
+
+
