@@ -103,9 +103,16 @@
         height: auto;
         width: 30vw;
     }
-    .image-2 {
-        width: 30vw;
+
+    .image-1 {
+        width: 40vw;
         height: auto;
+        filter: drop-shadow(2px 2px 10px black);
+        margin-left: 5vw;
+    }
+    .image-2 {
+        width: auto;
+        height: 90vh;
         filter: drop-shadow(2px 2px 10px black);
         margin-left: 5vw;
     }

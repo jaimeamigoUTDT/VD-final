@@ -118,7 +118,7 @@
 }
 #speed {
   color: white;
-  font-size: 36px;
+  font-size: 2vw;
   line-height: 100%;
   left: 50%;
   transform: translate(-50%, -50%);

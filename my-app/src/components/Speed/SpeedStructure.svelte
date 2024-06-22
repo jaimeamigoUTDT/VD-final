@@ -65,7 +65,6 @@
                         class="image-{actual_index}"
                         src="/src/assets/images/{images[actual_index]}"
                         alt="placeholder"
-                        transition:scale={{ duration: 500, start: 0.5, end: 1 }}
                     />
                     {/if}
                     {/each}
@@ -117,11 +116,11 @@
     .text-container {
         height: 20vh; /* Fixed height for text container */
         width: 58vw;
-        overflow: hidden; /* Hide overflow if text exceeds container */
+        overflow: visible; /* Hide overflow if text exceeds container */
     }
 
     .text {
-        font-size: 1.6em;
+        font-size: 1.4vw;
         color: #f3f3f3;
         text-align: justify;
         font-family: "Titillium Web", "sans-serif";
