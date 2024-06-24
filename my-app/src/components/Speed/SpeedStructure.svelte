@@ -10,7 +10,7 @@
     }
 
     let textos = {
-        0: "Un auto rápido es un auto ganador. Por esta razón, los fabricantes buscan constantemente nuevas formas de mejorar la velocidad de sus autos, realizando pequeños ajustes que prometen aumentarla.",
+        0: "Un auto rápido es un auto ganador. Por esta razón, los fabricantes buscan constantemente nuevas formas de mejorar la velocidad de sus autos, realizando pequeños ajustes que prometen aumentarla. Los ajustes pueden ocurrir de carrera en carrera durante una temporada, o de temporada en temporada. Pero hubo ciertos cambios que revolucionaron la formula 1.",
         1: "A fines de los 70s y principio de los 80s, llegaron a la formula 1 los motores turboalimentados. Estos motores podían producir más de 1,000 caballos de fuerza en contraste a los 285 a 500 caballos de fuerza que producían los motores en décadas anteriores.",
         2: "En 1982 se introdujo el primer auto con efecto suelo, el Lotus 78. Diseñoado por Chapman y su equipo utilizando un concepto inverso al que se usaba en los aviones de combate, este auto generaba una fuerza descendente que lo mantenía pegado al suelo. Generando así mayor agarre y velocidad en las curvas.",
         3: "En 1992 y 1993 el equipo Williams dominó la formula 1 con un sistema de suspensión activa. Este sistema permitía que el auto se mantuviera a una altura constante del suelo, independientemente de las condiciones de la pista. Sin embargo, este sistema fue prohibido en 1994 por la FIA.",
@@ -41,18 +41,13 @@
     };
 
     $: actual_speed = getSpeed(years[actual_index]);
-    $: height = actual_index === 0 ? "20vh" : "10vh";
 </script>
 
 <main>
-    <div class="column-container" style="height: {height};">
-        {#if actual_index === 0}
-            <h1 class="title" transition:fade={{ duration: 500 }}>{titles[actual_index]}</h1>
-        {/if}
-    </div>
     <div class="column-container height-80">
-        <div class="text-container" >
-            <p class="text" transition:fade={{ duration: 500 }}>{textos[actual_index]}</p>
+        {#if actual_index !== 0}
+        <div class="text-container">
+            <p class="text">{textos[actual_index]}</p>
         </div>
         <div id="assets" class="row-container">
             <div id="velocimeter" class="velocimeter">
@@ -70,6 +65,7 @@
                     {/each}
             </div>
         </div>
+        {/if}
     </div>
 </main>
 
@@ -90,6 +86,7 @@
         align-items: center;
         margin-left: auto;
         margin-right: auto;
+        padding-top: 10vh;
     }
 
     .row-container {
@@ -97,10 +94,9 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
+        width: 80%;
         height: 80%;
+        gap: 5vw;
     }
 
     .title {
@@ -111,6 +107,7 @@
         text-align: center;
         margin: 0;
         width: 70vw;
+        padding-top:25vh;
     }
 
     .text-container {
@@ -135,12 +132,12 @@
     }
 
     #context {
-        width: 50%;
+        width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden; /* Ensure the image is within the container */
+        overflow: visible; /* Ensure the image is within the container */
     }
 
     .height-80 {
@@ -148,13 +145,12 @@
     }
 
     .image-1 {
-        width: 25vw;
+        width: 20vw;
         filter: drop-shadow(2px 2px 10px black);
     }
 
     .image-2 {
         width: 35vw;
-        padding-left: 10vh;
         filter: drop-shadow(2px 2px 10px black);
     }
 
@@ -165,22 +161,24 @@
     }
 
     .image-4 {
-        width: 40vw;
+        width: 30vw;
         filter: drop-shadow(2px 2px 10px black);
     }
 
     .image-5 {
         width: 30vw;
-        border-width: 10px;
+        border-left: 10px;
+        border-top: 10px;
+        border-bottom: 10px;
+        border-right: 0px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
         border-style: solid;
         filter: drop-shadow(2px 2px 10px black);
-        border-image: linear-gradient(45deg, #fa0000, #15151e) 1;
-        animation: moveGradient 10s alternate infinite;
+        border-color: #38383F;
     }
 
-    @keyframes moveGradient {
-        50% {
-            border-image: linear-gradient(-135deg, #fa0000, #15151e) 1;
-        }
-    }
 </style>

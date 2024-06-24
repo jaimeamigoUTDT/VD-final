@@ -76,7 +76,7 @@
             <div class="text">{titleCase(d.data.id)}</div>
             <div style="height: 1vh;"></div>
             {#if d.data.data[valueKey]}
-            <div class="text value">{commas(d.data.data[valueKey])}</div>
+            <div class="text value">{commas(d.data.data[valueKey])}m</div>
             {/if}
         </div>
     </div>

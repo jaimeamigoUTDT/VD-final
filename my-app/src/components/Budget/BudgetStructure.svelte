@@ -5,21 +5,22 @@
     export let actual_index;
 
     let years = {
-        0: "2013",
-        1: "2014",
-        2: "2015",
-        3: "2016",
-        4: "2017",
-        5: "2018",
-        6: "2019",
-        7: "2020",
-        8: "2021",
-        9: "2022",
-        10: "2023",
+        1: "2013",
+        2: "2014",
+        3: "2015",
+        4: "2016",
+        5: "2017",
+        6: "2018",
+        7: "2019",
+        8: "2020",
+        9: "2021",
+        10: "2022",
+        11: "2023",
     }
 </script>
 
 <main class = "section">
+    {#if actual_index !== 0}
     <fieldset class = "container">
         <legend>{years[actual_index]}</legend>
         <div class="row">
@@ -32,6 +33,7 @@
         </div>
         
     </fieldset>
+    {/if}
 </main>
 
 <style>
