@@ -17,6 +17,7 @@
             {/if}
         </div>
         <div class="column card-container">
+            {#if driver === 1}
             <DriverCard 
                 name="Lewis" 
                 surname="Hamilton" 
@@ -24,6 +25,10 @@
                 nat="UK" 
                 color="#27f4d2" 
             />
+            {/if}
+            {#if driver === 0}
+            <img class ="image" src = "/src/assets/images/ferrari-logo.png" alt ="ferrari logo">
+            {/if}
         </div>
     </div>
 </main>
@@ -35,6 +40,10 @@
         justify-content: center;
         align-items: flex-end;
         height: 100%;
+    }
+
+    .image {
+        width: 40vw;
     }
 
     .chart-container {
