@@ -1,6 +1,5 @@
 <script>
     import Velocimeter from "./Velocimeter.svelte";
-    import { fade, scale } from 'svelte/transition';
     import velocidades from "/src/data/topSpeeds.csv";
 
     export let actual_index;
@@ -11,10 +10,10 @@
 
     let textos = {
         0: "Un auto rápido es un auto ganador. Por esta razón, los fabricantes buscan constantemente nuevas formas de mejorar la velocidad de sus autos, realizando pequeños ajustes que prometen aumentarla. Los ajustes pueden ocurrir de carrera en carrera durante una temporada, o de temporada en temporada. Pero hubo ciertos cambios que revolucionaron la formula 1.",
-        1: "A fines de los 70s y principio de los 80s, llegaron a la formula 1 los motores turboalimentados. Estos motores podían producir más de 1,000 caballos de fuerza en contraste a los 285 a 500 caballos de fuerza que producían los motores en décadas anteriores.",
-        2: "En 1982 se introdujo el primer auto con efecto suelo, el Lotus 78. Diseñoado por Chapman y su equipo utilizando un concepto inverso al que se usaba en los aviones de combate, este auto generaba una fuerza descendente que lo mantenía pegado al suelo. Generando así mayor agarre y velocidad en las curvas.",
-        3: "En 1992 y 1993 el equipo Williams dominó la formula 1 con un sistema de suspensión activa. Este sistema permitía que el auto se mantuviera a una altura constante del suelo, independientemente de las condiciones de la pista. Sin embargo, este sistema fue prohibido en 1994 por la FIA.",
-        4: "En 2011 se introdujo el sistema DRS (Drag Reduction System) en la formula 1. Este sistema permite a los pilotos abrir una compuerta en el alerón trasero del auto, reduciendo la resistencia al aire y aumentando la velocidad máxima del auto.",
+        1: "A fines de los 70s y principio de los 80s, llegaron a la formula 1 los motores turboalimentados. Estos motores podían producir más de 1,000 caballos de fuerza permitiendo alcanzar velocidades de 321 km/h.",
+        2: "En 1982 se introdujo el primer auto con efecto suelo, el Lotus 78. Diseñado por Chapman y su equipo, este auto generaba una fuerza descendente que lo mantenía pegado al suelo. Generando así mayor agarre y velocidad en las curvas. Este año. la velocidad rompió la barrera de los 330 km/h.",
+        3: "Tras la prohibicion del efecto suelo,en 1992 y 1993 el equipo Williams dominó la formula 1 con un sistema de suspensión activa. Este sistema permitía que el auto se mantuviera mas estable durante la carrera permitiendo una velocidad promedio mas elevada. Sin embargo, este sistema fue prohibido en 1994 por la FIA.",
+        4: "En 2011 se introdujo el sistema DRS (Drag Reduction System) en la formula 1. Este sistema permite a los pilotos abrir una compuerta en el alerón trasero del auto, reduciendo la resistencia al aire y aumentando la velocidad máxima del auto entre 15 y 20 km/h en las líneas rectas.",
         5: "En 2014 se introdujeron los motores híbridos a la formula 1. Estos motores utilizan un sistema de recuperación de energía cinética (ERS) que permite a los autos recargar sus baterías durante las frenadas y utilizar esa energía para aumentar la potencia del motor en las rectas.",
     };
 
@@ -33,7 +32,7 @@
         2: 1985,
         3: 1990,
         4: 2011,
-        5: 2022,
+        5: 2021,
     };
 
     let titles = {
@@ -104,7 +103,7 @@
         font-style: bold;
         font-size: 3.2vw;
         color: #f3f3f3;
-        text-align: center;
+        text-align: center;     
         margin: 0;
         width: 70vw;
         padding-top:25vh;
@@ -169,16 +168,14 @@
         width: 30vw;
         border-left: 10px;
         border-top: 10px;
-        border-bottom: 10px;
+        border-bottom: 0px;
         border-right: 0px;
         padding-top: 10px;
         padding-left: 10px;
-        padding-bottom: 10px;
         border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
         border-style: solid;
         filter: drop-shadow(2px 2px 10px black);
-        border-color: #38383F;
+        border-color: #FA0000;
     }
 
 </style>

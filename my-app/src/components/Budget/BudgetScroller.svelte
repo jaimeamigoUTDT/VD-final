@@ -2,7 +2,7 @@
   import Scroller from "@sveltejs/svelte-scroller";
   import BudgetStructure from "./BudgetStructure.svelte";
   import { fade, scale } from "svelte/transition";
-
+  
   
   export let top = 0;
   export let threshold = 0.5;

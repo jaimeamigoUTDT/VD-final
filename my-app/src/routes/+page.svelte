@@ -6,7 +6,7 @@
   import BudgetScroller from "../components/Budget/BudgetScroller.svelte";
   import DriversScroller from "../components/Champions/DriversScroller.svelte";
   import ConstructorsScroller from "../components/Champions/ConstructorsScroller.svelte";
-
+  
   let count = 0;
   let index = 0;
   let offset = 0;
@@ -23,6 +23,6 @@
   <ContextScroller {index} {count} {offset} {progress}/>
   <SpeedScroller {index} {count} {offset} {progress}/>
   <BudgetScroller {index} {count} {offset} {progress}/>
-  <!--<DriversScroller {index} {count} {offset} {progress}/>
-  <ConstructorsScroller {index} {count} {offset} {progress}/> -->
+  <DriversScroller {index} {count} {offset} {progress}/>
+  <ConstructorsScroller {index} {count} {offset} {progress}/>
 </main>

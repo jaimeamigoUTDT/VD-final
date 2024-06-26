@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Formula 1';
     src: url('../assets/fonts/Formula1-Regular.ttf') format('truetype');
+    font-weight: 300;
 }
 
 @font-face {
