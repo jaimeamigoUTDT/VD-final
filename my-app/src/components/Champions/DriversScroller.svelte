@@ -2,6 +2,8 @@
     import Scroller from "@sveltejs/svelte-scroller";
     import { fade, scale } from "svelte/transition";
     import DriversStructure from "./DriversStructure.svelte";
+    import Carousel from "../Carousel.svelte";
+    import DriverCard from "./DriverCard.svelte";
   
     export let top = 0;
     export let threshold = 0.5;
@@ -13,6 +15,12 @@
 
   let currentTitle = '';
   let currentBody = '';
+
+  let names = ['Lewis','Michael', 'Sebastian', 'Alain', 'Max', 'Ayrton', 'Bertrand', 'Arturo', 'Fernando']
+  let surnames = ['Hamilton', 'Schumacher','Vettel','Prost','Verstappen', 'Senna','Gachot','Merzario','Alonso']
+  let nationalities = ['UK', 'GER', 'GER', 'FRA', 'HOL', 'BRA', 'LUX', 'ITA', 'ESP']
+  let points = [4026,3626,2620,2526,2349,2179,1983,1939,1930]
+
 
   function typeText(text, callback) {
         let i = 0;
@@ -42,7 +50,7 @@
           bind:offset
           bind:progress>
           <div slot="background" class="section main-section">
-            {#if index !== 0}
+            {#if index === 1 || index === 2}
             <h1 class="title-drivers">
               Ranking histórico de pilotos de F1 (1950-2023)
             </h1>
@@ -63,6 +71,23 @@
               </section>
               <section class = "section">
                 <DriversStructure driver = {1}/>
+              </section>
+              <section class = "section">
+                <div class = "carousel-container">
+                  <Carousel autoplay="1000">
+                    {#each names as name, index (index)}
+                      <div>
+                        <DriverCard 
+                        name={name} 
+                        surname = {surnames[index]}
+                        points = {points[index]}
+                        nat = {nationalities[index]}/>
+                      </div>
+                    {/each}
+                    <span slot="left-control">Left</span>
+                    <span slot="right-control">Right</span>
+                  </Carousel>
+                </div>
               </section>
             </div>
       </Scroller>
@@ -119,4 +144,13 @@
       line-height: 200%;
       width: 100%;
     }
+
+    .carousel-container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 10vh;
+      }
+
   </style>

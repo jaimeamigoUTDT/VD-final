@@ -43,25 +43,14 @@
 </script>
 
 <main>
-    <div class="column-container height-80">
+    <div class="column-container">
         {#if actual_index !== 0}
-        <div class="text-container">
-            <p class="text">{textos[actual_index]}</p>
-        </div>
         <div id="assets" class="row-container">
             <div id="velocimeter" class="velocimeter">
                 <Velocimeter {actual_speed} />
             </div>
-            <div id="context" class="context">
-                {#each Object.keys(images) as index}
-                {#if actual_index == index}
-                    <img
-                        class="image-{actual_index}"
-                        src="/src/assets/images/{images[actual_index]}"
-                        alt="placeholder"
-                    />
-                    {/if}
-                    {/each}
+            <div class="text-container">
+                
             </div>
         </div>
         {/if}
@@ -86,6 +75,7 @@
         margin-left: auto;
         margin-right: auto;
         padding-top: 10vh;
+        height: 100vh;
     }
 
     .row-container {
@@ -93,9 +83,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 80%;
-        height: 80%;
+        width: 90vw;
+        height: 100vh;
         gap: 5vw;
+        padding-bottom: 20vh;
     }
 
     .title {
@@ -110,19 +101,19 @@
     }
 
     .text-container {
-        height: 20vh; /* Fixed height for text container */
         width: 58vw;
         overflow: visible; /* Hide overflow if text exceeds container */
     }
 
     .text {
-        font-size: 1.4vw;
+        font-size: 1.5em;
         color: #f3f3f3;
         text-align: justify;
         font-family: "Titillium Web", "sans-serif";
         font-weight: 400;
-        line-height: 200%;
-        width: 100%;
+        line-height: 170%;
+        margin-right: 10vw;
+        width: 40vw;
     }
 
     #velocimeter {

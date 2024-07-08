@@ -19,6 +19,7 @@
 	"dependencies": {
 		"@sveltejs/svelte-scroller": "^2.0.7",
 		"d3": "^7.9.0",
-		"layercake": "^8.3.0"
+		"layercake": "^8.3.0",
+		"siema": "^1.5.1"
 	}
 }

@@ -1,5 +1,4 @@
 <script>
-    import DriverCard from "./DriverCard.svelte";
     import DriversRaceChart from "./DriversRaceChart.svelte";
     import ConstructorsChart from "./ConstructorsChart.svelte";
 
@@ -16,20 +15,7 @@
             <ConstructorsChart />
             {/if}
         </div>
-        <div class="column card-container">
-            {#if driver === 1}
-            <DriverCard 
-                name="Lewis" 
-                surname="Hamilton" 
-                points={4026} 
-                nat="UK" 
-                color="#27f4d2" 
-            />
-            {/if}
-            {#if driver === 0}
-            <img class ="image" src = "/src/assets/images/ferrari-logo.png" alt ="ferrari logo">
-            {/if}
-        </div>
+        
     </div>
 </main>
 
@@ -42,33 +28,18 @@
         height: 100%;
     }
 
-    .image {
-        width: 40vw;
-    }
-
     .chart-container {
-        width: 40vw;
+        width: 100vw;
         height: 70vh;
-        padding-left: 10vw;
-    }
-
-    .card-container {
-        width: 20vw;
-        padding-right: 15vw;
-        padding-bottom: 10vh;
-    }
-
-    .column {
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: center;
     }
 
     .row {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
         width: 100%;
     }
 </style>

@@ -123,3 +123,9 @@ body {
     position: fixed;
     z-index: 10;
 }
+
+.line-chart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

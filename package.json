@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "@rollup/plugin-dsv": "^3.0.4"
+  },
+  "dependencies": {
+    "siema": "^1.5.1"
   }
 }

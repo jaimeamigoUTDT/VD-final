@@ -44,7 +44,7 @@
         height: 90vh;
         border-radius: 15px;
         border-color: #FA0000;
-        border-width: 10px;
+        border-width: 3px;
         margin-top:2vh;
         margin-bottom: 2vh;
         margin-left: 2vw;

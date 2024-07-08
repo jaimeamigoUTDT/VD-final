@@ -1,7 +1,7 @@
 <script>
     import Scroller from "@sveltejs/svelte-scroller";
-    import ConstructorStructre from "./DriversStructure.svelte";
-  import DriversStructure from "./DriversStructure.svelte";
+    import ConstructorStructre from "./ConstructorsStructure.svelte";
+    import DriversStructure from "./DriversStructure.svelte";
   
     export let top = 0;
     export let threshold = 0.5;

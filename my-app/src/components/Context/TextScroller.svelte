@@ -151,7 +151,7 @@
         text-align: justify;
         font-family: "Titillium Web", "sans-serif";
         font-weight: 400;
-        line-height: 200%;
+        line-height: 170%;
         margin-right: 10vw;
         width: 40vw;
     }

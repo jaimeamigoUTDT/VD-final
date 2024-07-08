@@ -1,7 +1,3 @@
-<head>
-  <link rel="stylesheet" href="./src/style/styles.css" />
-</head>
-
 <main>
   <div class="center section">
     <img class="f1-logo" src="./src/assets/images/f1_logo.png" alt="f1 logo" />
