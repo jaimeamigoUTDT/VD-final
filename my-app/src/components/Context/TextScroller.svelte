@@ -1,6 +1,11 @@
 <script>
     import { fade, scale } from 'svelte/transition';
 
+    import first_GP from "$lib/assets/images/f1-1950.png";
+    import f1_trophy from "$lib/assets/images/f1-trophy.png";
+    import max_verstappen from "$lib/assets/images/max-verstappen.png";
+    import ferrari from "$lib/assets/images/ferrari.png";
+
     export let actual_index;
     
     let currentTitle = '';
@@ -8,10 +13,10 @@
 
     /* Images */
     let images = {
-        0: "f1-1950.png",
-        1: "f1-trophy.png",
-        2: "max-verstappen.png",
-        3: "ferrari.png",
+        0: first_GP,
+        1: f1_trophy,
+        2: max_verstappen,
+        3: ferrari,
     };
 
     /* Titles */
@@ -57,7 +62,7 @@
                     <!-- svelte-ignore a11y-img-redundant-alt -->
                     <img
                         class="image-{index}"
-                        src="./src/assets/images/{images[index]}"
+                        src="{images[index]}"
                         alt="placeholder image"
                         transition:scale={{ duration: 500, start: 0.5, end: 1 }}
                     />

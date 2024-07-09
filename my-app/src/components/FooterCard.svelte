@@ -1,6 +1,16 @@
 <script>
   export let title;
   export let index;
+
+  import Svelte from "$lib/assets/images/SVELTE.png";
+  import D3 from "$lib/assets/images/D3.png";
+  import JS from "$lib/assets/images/JS.png";
+  import HTML from "$lib/assets/images/HTML.png";
+  import CSS from "$lib/assets/images/CSS.png";
+  import LAYERCAKE from "$lib/assets/images/LAYERCAKE.png";
+  import FLOURISH from "$lib/assets/images/FLOURISH.png";
+
+
 </script>
 
 <div class="container">
@@ -30,13 +40,13 @@
   {/if}
   {#if index === 2}
     <div class = "tech-grid">
-        <img src="./src/assets/images/SVELTE.png" alt="Svelte" width="100" height="100">
-        <img src="./src/assets/images/D3.png" alt="D3" width="100" height="100">
-        <img src="./src/assets/images/JS.png" alt="JavaScript" width="100" height="100">
-        <img src="./src/assets/images/HTML.png" alt="HTML" width="100" height="100">
-        <img src="./src/assets/images/CSS.png" alt="CSS" width="100" height="100">
-        <img src="./src/assets/images/LAYERCAKE.png" alt="LayerCake" width="100" height="100">
-        <img src="./src/assets/images/FLOURISH.png" alt="Flourish" width="110" height="60">
+        <img src={Svelte} alt="Svelte" width="90" height="90">
+        <img src={D3} alt="D3" width="90" height="90">
+        <img src={JS} alt="JavaScript" width="90" height="90">
+        <img src={HTML} alt="HTML" width="90" height="90">
+        <img src={CSS} alt="CSS" width="90" height="90">
+        <img src={LAYERCAKE} alt="LayerCake" width="90" height="90">
+        <img src={FLOURISH} alt="Flourish" width="110" height="60">
 
     </div>
   {/if}

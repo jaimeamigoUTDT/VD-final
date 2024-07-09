@@ -13,10 +13,6 @@
 
 </script>
 
-<head>
-    <link rel="stylesheet" href="../src/style/styles.css" />
-</head>
-
 <main>
     <Scroller
         {top}
@@ -40,4 +36,5 @@
 </main>
 
 <style>
+      @import "$lib/style/styles.css";
 </style>

@@ -114,8 +114,8 @@
         line-height: 170%;
         margin-right: 10vw;
         width: 40vw;
-        padding-top: 30vh;
-        padding-left: 44vw;
+        padding-top: 35vh;
+        padding-left: 50vw;
     }
 
   .subtitle {

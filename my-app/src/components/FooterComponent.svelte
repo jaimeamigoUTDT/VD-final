@@ -1,5 +1,6 @@
 <script>
     import FooterCard from "./FooterCard.svelte";
+    
 </script>
 
 <main class = "main-container">

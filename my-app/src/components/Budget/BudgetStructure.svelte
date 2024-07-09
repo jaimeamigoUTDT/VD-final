@@ -27,7 +27,7 @@
             <div class="element">
                 <BudgetLayerCake selectedYear = {years[actual_index]}/>
             </div>
-            <div class = "text-container">
+            <div class = "text-container" style="visibility: hidden;">
                 <BudgetText actual_index = {actual_index}/>
             </div>
         </div>

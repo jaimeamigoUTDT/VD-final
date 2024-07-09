@@ -18,10 +18,9 @@
 
   let names = ['Lewis','Michael', 'Sebastian', 'Alain', 'Max', 'Ayrton', 'Bertrand', 'Arturo', 'Fernando']
   let surnames = ['Hamilton', 'Schumacher','Vettel','Prost','Verstappen', 'Senna','Gachot','Merzario','Alonso']
-  let nationalities = ['UK', 'GER', 'GER', 'FRA', 'HOL', 'BRA', 'LUX', 'ITA', 'ESP']
+  // let nationalities = ['UK', 'GER', 'GER', 'FRA', 'HOL', 'BRA', 'LUX', 'ITA', 'ESP']
   let points = [4026,3626,2620,2526,2349,2179,1983,1939,1930]
   let colors = ['#27f4d2','#e80020','#3671c6','#e80020','#3671c6','#ff8000','#229971','#e80020','#229971']
-
 
   function typeText(text, callback) {
         let i = 0;
@@ -82,7 +81,6 @@
                         name={name} 
                         surname = {surnames[index]}
                         points = {points[index]}
-                        nat = {nationalities[index]}
                         color = {colors[index]}/>
                       </div>
                     {/each}

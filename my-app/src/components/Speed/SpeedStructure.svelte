@@ -89,84 +89,14 @@
         padding-bottom: 20vh;
     }
 
-    .title {
-        font-family: "Formula 1";
-        font-style: bold;
-        font-size: 3.2vw;
-        color: #f3f3f3;
-        text-align: center;     
-        margin: 0;
-        width: 70vw;
-        padding-top:25vh;
-    }
-
     .text-container {
         width: 58vw;
         overflow: visible; /* Hide overflow if text exceeds container */
     }
 
-    .text {
-        font-size: 1.5em;
-        color: #f3f3f3;
-        text-align: justify;
-        font-family: "Titillium Web", "sans-serif";
-        font-weight: 400;
-        line-height: 170%;
-        margin-right: 10vw;
-        width: 40vw;
-    }
-
     #velocimeter {
         width: 50%;
         height: 100%;
-    }
-
-    #context {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: visible; /* Ensure the image is within the container */
-    }
-
-    .height-80 {
-        height: 90vh;
-    }
-
-    .image-1 {
-        width: 20vw;
-        filter: drop-shadow(2px 2px 10px black);
-    }
-
-    .image-2 {
-        width: 35vw;
-        filter: drop-shadow(2px 2px 10px black);
-    }
-
-    .image-3 {
-        width: 30vw;
-        transform: rotate(15deg);
-        filter: drop-shadow(2px 2px 10px black);
-    }
-
-    .image-4 {
-        width: 30vw;
-        filter: drop-shadow(2px 2px 10px black);
-    }
-
-    .image-5 {
-        width: 30vw;
-        border-left: 10px;
-        border-top: 10px;
-        border-bottom: 0px;
-        border-right: 0px;
-        padding-top: 10px;
-        padding-left: 10px;
-        border-top-left-radius: 15px;
-        border-style: solid;
-        filter: drop-shadow(2px 2px 10px black);
-        border-color: #FA0000;
     }
 
 </style>

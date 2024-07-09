@@ -1,6 +1,10 @@
+<script>
+  import logo from "$lib/assets/images/f1_logo.png"
+</script>
+
 <main>
   <div class="center section">
-    <img class="f1-logo" src="./src/assets/images/f1_logo.png" alt="f1 logo" />
+    <img class="f1-logo" src={logo} alt="f1 logo" />
     <div style="height: 5vh"></div>
     <h1 class="title padding-50">
       <b>La historia a 300km/h</b>
