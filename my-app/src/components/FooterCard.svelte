@@ -9,8 +9,17 @@
   import CSS from "$lib/assets/images/CSS.png";
   import LAYERCAKE from "$lib/assets/images/LAYERCAKE.png";
   import FLOURISH from "$lib/assets/images/FLOURISH.png";
+  import ScoringSystem from "$lib/assets/images/sistema_de_puntos.png"; // Add your scoring system image here
 
+  let showOverlay = false;
 
+  function openOverlay() {
+    showOverlay = true;
+  }
+
+  function closeOverlay() {
+    showOverlay = false;
+  }
 </script>
 
 <div class="container">
@@ -30,24 +39,32 @@
   {#if index === 1}
     <div class="text-container">
       <h2 class="subtitle">RESULTADOS POR CARRERA</h2>
-      <a class = "text" target=”_blank” href="https://www.kaggle.com/datasets/kshitij9/f1-2022-dataset">F1 - Dataset</a>
+      <a class="text" target="_blank" href="https://www.kaggle.com/datasets/kshitij9/f1-2022-dataset">F1 - Dataset</a>
+      <p class="text" on:click={openOverlay}>Sistema de puntuación</p>
       <h2 class="subtitle">PRESUPUESTOS</h2>
-      <a class = "text" target=”_blank” href="http://hdl.handle.net/10908/22386">Budget efficiency performance in Formula 1</a>
+      <a class="text" target="_blank" href="http://hdl.handle.net/10908/22386">Budget efficiency performance in Formula 1</a>
       <h2 class="subtitle">VELOCIDADES</h2>
-      <p class="text">Buscadas en distintos articulos a lo 
-        largo de internet</p>
+      <p class="text">Buscadas en distintos artículos a lo largo de internet</p>
     </div>
   {/if}
   {#if index === 2}
-    <div class = "tech-grid">
-        <img src={Svelte} alt="Svelte" width="90" height="90">
-        <img src={D3} alt="D3" width="90" height="90">
-        <img src={JS} alt="JavaScript" width="90" height="90">
-        <img src={HTML} alt="HTML" width="90" height="90">
-        <img src={CSS} alt="CSS" width="90" height="90">
-        <img src={LAYERCAKE} alt="LayerCake" width="90" height="90">
-        <img src={FLOURISH} alt="Flourish" width="110" height="60">
+    <div class="tech-grid">
+      <img src={Svelte} alt="Svelte" width="90" height="90">
+      <img src={D3} alt="D3" width="90" height="90">
+      <img src={JS} alt="JavaScript" width="90" height="90">
+      <img src={HTML} alt="HTML" width="90" height="90">
+      <img src={CSS} alt="CSS" width="90" height="90">
+      <img src={LAYERCAKE} alt="LayerCake" width="90" height="90">
+      <img src={FLOURISH} alt="Flourish" width="110" height="60">
+    </div>
+  {/if}
 
+  {#if showOverlay}
+    <div class="overlay">
+      <div class="overlay-content">
+        <button class="close-button" on:click={closeOverlay}>&times;</button>
+        <img src={ScoringSystem} alt="Sistema de Puntuación">
+      </div>
     </div>
   {/if}
 </div>
@@ -69,11 +86,10 @@
     font-size: 2em;
     font-family: "Formula 1";
     color: #fa0000;
-    font-family: "Formula 1";
     font-style: bold;
   }
 
-  .subtitle {
+  .subtitle, .text {
     color: #fff;
     font-family: "Titillium Web";
     font-size: 1.3em;
@@ -81,10 +97,8 @@
   }
 
   .text {
-    color: #fff;
-    font-family: "Titillium Web";
-    font-size: 1.3em;
-    font-style: normal;
+    cursor: pointer;
+    text-decoration: underline;
   }
 
   .tech-grid {
@@ -94,5 +108,41 @@
     grid-column-gap: 50px;
     grid-row-gap: 15px;
     padding-left: 10px;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .overlay-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+  }
+
+  .overlay img {
+    width: 100%;
+    height: auto;
+  }
+
+  .close-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
   }
 </style>
