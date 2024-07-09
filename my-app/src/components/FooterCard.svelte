@@ -33,14 +33,14 @@
       <p class="text">Juana Copello</p>
       <p class="text">Tomás Curzio</p>
       <h2 class="subtitle">OTROS TRABAJOS</h2>
-      <p class="text">Dataviz - Gastronomía Argentina</p>
+      <a class="text" target="_blank" href = "https://proyecto-parcial.vercel.app/">Dataviz - Gastronomía Argentina</a>
     </div>
   {/if}
   {#if index === 1}
     <div class="text-container">
       <h2 class="subtitle">RESULTADOS POR CARRERA</h2>
       <a class="text" target="_blank" href="https://www.kaggle.com/datasets/kshitij9/f1-2022-dataset">F1 - Dataset</a>
-      <p class="text" on:click={openOverlay}>Sistema de puntuación</p>
+      <a class="points-text" role="button" on:click={openOverlay}>Sistema de puntuación</a>
       <h2 class="subtitle">PRESUPUESTOS</h2>
       <a class="text" target="_blank" href="http://hdl.handle.net/10908/22386">Budget efficiency performance in Formula 1</a>
       <h2 class="subtitle">VELOCIDADES</h2>
@@ -96,8 +96,8 @@
     font-style: normal;
   }
 
-  .text {
-    cursor: pointer;
+  .points-text {
+    cursor: grab;
     text-decoration: underline;
   }
 
