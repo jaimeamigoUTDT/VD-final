@@ -43,7 +43,7 @@
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <!-- svelte-ignore a11y-interactive-supports-focus -->
       <!-- svelte-ignore a11y-missing-attribute -->
-      <a class="points-text" role="button" on:click={openOverlay}>Sistema de puntuación</a>
+      <a class="text points-text" role="button" on:click={openOverlay}>Sistema de puntuación</a>
       <h2 class="subtitle">PRESUPUESTOS</h2>
       <a class="text" target="_blank" href="http://hdl.handle.net/10908/22386">Budget efficiency performance in Formula 1</a>
       <h2 class="subtitle">VELOCIDADES</h2>
