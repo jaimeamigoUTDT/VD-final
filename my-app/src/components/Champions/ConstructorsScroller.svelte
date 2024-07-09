@@ -63,7 +63,7 @@
     }
   
     .title-drivers {
-        font-size: 2em;
+        font-size: 35px;
         color: white;
         font-family: 'Formula 1';
         padding-top: 5vh;

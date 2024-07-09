@@ -20,6 +20,7 @@
   let surnames = ['Hamilton', 'Schumacher','Vettel','Prost','Verstappen', 'Senna','Gachot','Merzario','Alonso']
   let nationalities = ['UK', 'GER', 'GER', 'FRA', 'HOL', 'BRA', 'LUX', 'ITA', 'ESP']
   let points = [4026,3626,2620,2526,2349,2179,1983,1939,1930]
+  let colors = ['#27f4d2','#e80020','#3671c6','#e80020','#3671c6','#ff8000','#229971','#e80020','#229971']
 
 
   function typeText(text, callback) {
@@ -74,14 +75,15 @@
               </section>
               <section class = "section">
                 <div class = "carousel-container">
-                  <Carousel autoplay="1000">
+                  <Carousel autoplay="5000">
                     {#each names as name, index (index)}
                       <div>
                         <DriverCard 
                         name={name} 
                         surname = {surnames[index]}
                         points = {points[index]}
-                        nat = {nationalities[index]}/>
+                        nat = {nationalities[index]}
+                        color = {colors[index]}/>
                       </div>
                     {/each}
                     <span slot="left-control">Left</span>
@@ -112,7 +114,7 @@
     }
   
     .title-drivers {
-        font-size: 2em;
+        font-size: 35px;
         color: white;
         font-family: 'Formula 1';
         padding-top: 5vh;
@@ -121,7 +123,7 @@
     .title {
       font-family: "Formula 1";
       font-style: bold;
-      font-size: 3.2vw;
+      font-size: 35px;
       color: #f3f3f3;
       text-align: center;
       margin: 0;

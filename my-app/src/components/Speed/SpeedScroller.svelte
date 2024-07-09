@@ -91,7 +91,7 @@
   .title {
     font-family: "Formula 1";
     font-style: bold;
-    font-size: 3.2vw;
+    font-size: 35px;
     color: #f3f3f3;
     text-align: center;
     margin: 0;

@@ -137,7 +137,7 @@
     }
 
     .title {
-        font-size: 3.2vw;
+        font-size: 35px;
         font-weight: bold;
         margin-bottom: 1em;
         font-family: "Formula 1";

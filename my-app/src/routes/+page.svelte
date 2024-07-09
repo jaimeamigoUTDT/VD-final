@@ -7,6 +7,7 @@
   import DriversScroller from "../components/Champions/DriversScroller.svelte";
   import ConstructorsScroller from "../components/Champions/ConstructorsScroller.svelte";
   import BudgetLineChart from "../components/Budget/BudgetLineChart.svelte";
+  import FooterComponent from "../components/FooterComponent.svelte";
   
   let count = 0;
   let index = 0;
@@ -33,4 +34,7 @@
   </div>
   <DriversScroller {index} {count} {offset} {progress}/>
   <ConstructorsScroller {index} {count} {offset} {progress}/>
+  <div class = "section">
+    <FooterComponent />
+  </div>
 </main>
