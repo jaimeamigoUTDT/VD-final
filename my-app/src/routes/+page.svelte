@@ -9,6 +9,8 @@
   import BudgetLineChart from "../components/Budget/BudgetLineChart.svelte";
   import FooterComponent from "../components/FooterComponent.svelte";
 
+  import ICON from "$lib/assets/images/f1_logo.png";
+
   import video from "$lib/assets/videos/background.mp4";
 
   let count = 0;
@@ -36,6 +38,12 @@
     return () => window.removeEventListener("scroll", handleScroll);
   });
 </script>
+
+<head>
+  <title>Formula 1</title>
+  <link rel="icon" href={ICON} />
+</head>
+
 
 <main>
   {#if yIndex < 0.97 && yIndex > 0.03}
