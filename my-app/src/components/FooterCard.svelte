@@ -40,10 +40,10 @@
     <div class="text-container">
       <h2 class="subtitle">RESULTADOS POR CARRERA</h2>
       <a class="text" target="_blank" href="https://www.kaggle.com/datasets/kshitij9/f1-2022-dataset">F1 - Dataset</a>
+      <div id= "spacer"></div>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <!-- svelte-ignore a11y-interactive-supports-focus -->
       <!-- svelte-ignore a11y-missing-attribute -->
-      <div id= "spacer"></div>
       <a class="text points-text" role="button" on:click={openOverlay}>Sistema de puntuación</a>
       <h2 class="subtitle">PRESUPUESTOS</h2>
       <a class="text" target="_blank" href="http://hdl.handle.net/10908/22386">Budget efficiency performance in Formula 1</a>
