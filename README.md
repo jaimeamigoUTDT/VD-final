@@ -50,8 +50,6 @@ npm run preview
 ```
 Esto iniciará un servidor de previsualización y deberías poder ver tu aplicación en funcionamiento abriendo tu navegador y visitando http://localhost:3000 (o el puerto especificado en la configuración de tu aplicación).
 
-## ¡Espero que disfrutes la historia!
-
 # Tecnologías usadas
 
 Para este proyecto tuve que combinar tecnologías vistas en clase, como Svelte, Html, Css, Javascript, D3 con otras librerías como Rollup para el cargado de archivos .csv, y LayerCake o Flourish para hacer los graficos. Por otro lado, Python fue clave para el filtrado de datos, el armado de datasets mas pequeños. Por último, una de las librerías mas importantes para este trabajo fue Svelte-scroller, sobre la que realice el 90% del trabajo.
@@ -67,3 +65,5 @@ Python fue el lenguaje que elegí para tratar mis datos. Dado que estaba trabaja
 
 ## Svelte-scroller
 El objetivo del trabajo era hacer un scrollytelling, por lo que utilizar una librería como Svelte-scroller se volvió indispensable. Utilicé esta librería en reiteradas ocaciones, ya que el proyecto tenía distintas secciones y cada una de ellas tenía un scroller particular. Si bien al principio me costo entender el funcionamiento, una vez que comprendí como funcionaba, pude aprovechar el potencial del mismo.
+
+## ¡Espero que disfrutes la historia!
